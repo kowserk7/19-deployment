@@ -1,0 +1,25 @@
+language: node_js
+node_js: 
+  - 'stable' #installs node.js
+services:
+  - 'mongodb' #installs and runs mongodb
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchanin-r-rest
+    packages:
+      - gcc-5
+      - g++-5
+  env:
+    -CXX=g++-5
+  sudo: required
+  # safelist
+  branches:
+    only:
+      - master
+      - staging
+      - development
+  before script: npm -1
+  script:
+    # - npm run Lint
+    - npm test
