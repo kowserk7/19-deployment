@@ -3,7 +3,7 @@
 const server = require('../../../lib/server');
 const superagent = require('superagent');
 const mock = require('../../lib/mock');
-const faker = require('faker');
+// const faker = require('faker');
 
 describe('GET /api/v1/signin', function () {
   beforeAll(server.start);
